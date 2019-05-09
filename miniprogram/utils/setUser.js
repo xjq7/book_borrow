@@ -7,7 +7,8 @@ function setUser(u){
       studentId: u.studentId,
       avatarUrl: u.avatarUrl,
       role: 2,
-      _openid: u._openid
+      _openid: u._openid,
+      _id:u._id
     })
    
   } catch (e) { }
@@ -16,7 +17,8 @@ function setUser(u){
     studentId: u.studentId,
     role: 2,
     avatarUrl: u.avatarUrl,
-    _openid: u._openid
+    _openid: u._openid,
+    _id: u._id
   }
   app.globalData.login = true
 }

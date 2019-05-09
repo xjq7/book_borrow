@@ -28,7 +28,8 @@ Page({
           studentId: u1.studentId,
           role: 2,
           avatarUrl: u1.avatarUrl,
-          _openid: u1._openid
+          _openid: u1._openid,
+          _id:u1._id
         }
         app.globalData.login = true
       }else{
@@ -36,6 +37,16 @@ Page({
           url: `../../pages/login/login?gender=${u.gender}&avatarUrl=${u.avatarUrl}`,
         })
       }
+    })
+  },
+  setting(){
+    wx.navigateTo({
+      url: `../../pages/setting/setting?id=${this.data.userInfo._id}`,
+    })
+  },
+  adminSetting(){
+    wx.navigateTo({
+      url: `../../pages/adminSetting/adminSetting?id=${this.data.userInfo._id}`,
     })
   }
 })
