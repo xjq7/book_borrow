@@ -1,0 +1,35 @@
+.m1{
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.m2{
+  width: 50%;
+  height: 300rpx;
+  margin-left: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.m2 cover-image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.m1 cover-image{
+  width: 20%;
+  height:120rpx;
+}
+.m1 text,.m2 text{
+  font-size: 30rpx;
+  font-family: "STXihei";
+}
+.searchTag{
+  width: 100%;
+  margin: 0 auto;
+}
+.searchTag .tag{
+  padding: 20rpx;
+}

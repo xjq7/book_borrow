@@ -1,0 +1,18 @@
+<van-cell-group>
+  <van-field
+    value="{{ username }}"
+    label="姓名"
+    placeholder="请输入姓名"
+    bind:blur="getName"
+  />
+  <van-field
+    value="{{ studentId }}"
+    type="number"
+    label="学号"
+    placeholder="请输入学号"
+    bind:blur="getId"
+  />
+</van-cell-group>
+<view class='mt'></view>
+<van-button size='large' type="warning" bindtap='next'>提交</van-button>
+<van-toast id="van-toast" />

@@ -1,0 +1,13 @@
+<van-search value="{{ value }}" placeholder="请输入用户学号" placeholder-style='{font-family:"Verdana"}'/>
+<view class='noSearch' wx:if="{{noSearch}}">
+  <cover-image src='../../static/imgs/emptyList.png'></cover-image>
+  <text>没有逾约记录</text>
+</view>
+<view class='default' wx:else>
+  <view class='userInfo'>
+    <view>学号:20154360211</view>
+    <view>姓名:理智</view>
+    <view>书名:红楼梦</view>
+  </view>
+  <text>逾约 13 天</text>
+</view>

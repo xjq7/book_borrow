@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/bookList/bookList",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/index/index",
+    "pages/bookInfo/bookInfo",
+    "pages/borrow/borrow",
+    "pages/addBook/addBook",   
+    "pages/setting/setting",
+    "pages/bookApplication/bookApplication",
+    "pages/default/default",
+    "pages/adminSetting/adminSetting"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "book",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-field": "../../vant/field/index",
+    "van-picker": "../../vant/picker/index",
+    "van-action-sheet": "../../vant/action-sheet/index",
+    "van-icon": "../../vant/icon/index",
+    "van-toast": "../../vant/toast/index",
+    "van-cell": "../../vant/cell/index",
+    "van-cell-group": "../../vant/cell-group/index",
+    "van-button": "../../vant/button/index",
+    "van-notice-bar": "../../vant/notice-bar/index",
+    "van-search": "../../vant/search/index",
+    "van-tab": "../../vant/tab/index",
+    "van-tabs": "../../vant/tabs/index",
+    "van-datetime-picker": "../../vant/datetime-picker/index"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#f60",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/imgs/home1.png",
+        "selectedIconPath": "static/imgs/home2.png"
+      },
+      {
+        "pagePath": "pages/bookList/bookList",
+        "text": "书架",
+        "iconPath": "static/imgs/bookList1.png",
+        "selectedIconPath": "static/imgs/bookList2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "static/imgs/user1.png",
+        "selectedIconPath": "static/imgs/user2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

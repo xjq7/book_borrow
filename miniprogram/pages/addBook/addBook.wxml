@@ -1,0 +1,19 @@
+<van-search value="{{ value }}" placeholder="请输入书名" bind:search="onSearch"/>
+<view class='mt20'></view>
+<view class='showEmpty' wx:if="{{list.length<1}}">
+  <cover-image src='../../static/imgs/emptyList.png'></cover-image>
+  <text>找不到相关记录...</text>
+</view>
+<view wx:else>
+  <view class='history' wx:for="{{list}}" wx:key="_id" wx:for-index="idx">
+    <view class='info font24 pdl40'>
+      <text>申请人:{{item.name}}</text>
+      <text>书名:{{item.bookName}}</text>
+      <text>作者:{{item.author}}</text>
+      <text>isbn:{{item.isbn==''?'无':item.isbn}}</text>
+    </view>
+    <van-button plain type='warning' class='pdr30' data-idx="{{idx}}" bindtap='delete'>已录入</van-button>
+  </view>
+</view>
+
+

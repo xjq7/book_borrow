@@ -1,0 +1,2 @@
+<van-button size='normal' type="warning" plain class='center' bindtap='next'>切换普通用户</van-button>
+<van-toast id="van-toast" />

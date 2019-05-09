@@ -1,0 +1,28 @@
+<van-cell-group> 
+  <van-field
+    value="{{ BookName }}"
+    required
+    clearable
+    label="书名"
+    placeholder="请输入书名"
+    bind:blur="getBookName"
+  />
+  <van-field
+    required
+    value="{{ author }}"
+    label="作者"
+    placeholder="请输入作者"
+    bind:blur="getAuthor"
+  />
+  <van-field
+    value="{{ isbn }}"
+    clearable
+    label="ISBN"
+    placeholder="(可不填)"
+    bind:blur="getIsbn"
+  />
+
+</van-cell-group>
+<view class='mt'></view>
+<van-button size='large' type='danger' bindtap='add'>提交</van-button>
+<van-toast id="van-toast" />

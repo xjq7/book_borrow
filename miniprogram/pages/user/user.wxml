@@ -1,0 +1,23 @@
+<view class='m1'>
+  <cover-image src='{{ userInfo.avatarUrl ||"../../static/imgs/user_img.png"}}'></cover-image>
+  <view wx:if="{{login}}"  class='userInfo'>
+    <text>{{userInfo.name}}</text>
+    <text>学号:{{userInfo.studentId}}</text>
+  </view>
+  <view wx:else>
+    <button class='clickLogin' open-type="getUserInfo" bindgetuserinfo="login">授权登录</button> 
+  </view>
+</view>
+<view wx:if="{{userInfo.role==1}}">
+    <van-cell title="用户书籍申请" icon="envelop-o" is-link="true" url="../../pages/addBook/addBook"/>
+    <van-cell title="用户违约记录" icon="warning-o"  is-link="true" url="../../pages/default/default"/>
+    <van-cell title="设置" icon="setting-o"  is-link="true" url="../../pages/adminSetting/adminSetting"/>
+  </view>
+<view wx:else>
+  <van-cell title="借书记录" icon="todo-list-o" is-link="true" url=""/>
+  <van-cell title="违约记录" icon="location-o"  is-link="true"/>
+  <van-cell title="新手帮助" icon="question-o"  is-link="true"/>
+  <van-cell title="意见反馈" icon="warning-o"  is-link="true"/>
+  <van-cell title="关于我们" icon="info-o" is-link="true" />
+  <van-cell title="设置" icon="setting-o"  is-link="true" url="../../pages/setting/setting"/>
+</view>

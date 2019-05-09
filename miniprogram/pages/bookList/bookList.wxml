@@ -1,0 +1,50 @@
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="借书单">
+    <view class='bookListLine'></view>
+    <view class='bookList'>
+      <cover-image src='1.png'></cover-image>
+      <view class='bookInfo'>
+        <text>书名:西游记</text>
+        <text>ISBN:23123412431</text>
+        <text>作者:李白</text>
+      </view>
+      <view>
+        <van-icon name="delete" bindtap=''  class='delete'/>
+        <view class='collect' bindtap=''>加入收藏夹</view>
+      </view>  
+    </view>
+    <view class='showEmpty' wx:if="{{login&&borrowList.length<1}}">
+      <cover-image src='../../static/imgs/emptyList.png'></cover-image>
+      <text>书单空空如也...</text>
+    </view>
+    <view class='btnBottom'></view>
+    <van-button wx:if="{{login}}" class='next' bindtap='next' type='warning' plain>借阅</van-button>
+  </van-tab>
+  <van-tab title="收藏夹">
+    <view class='bookListLine'></view>
+    <view class='bookList'>
+      <cover-image src='1.png'></cover-image>
+      <view class='bookInfo'>
+        <text>书名:西游记</text>
+        <text>ISBN:23123412431</text>
+        <text>作者:李白</text>
+      </view>
+      <view>
+        <van-icon name="delete" bindtap=''  class='delete'/>
+        <view class='collect' bindtap=''>加入借书单</view>
+      </view>  
+    </view>
+    <view class='showEmpty' wx:if="{{login&&favorites.length<1}}">
+      <cover-image src='../../static/imgs/emptyList.png'></cover-image>
+      <text>收藏夹空空如也...</text>
+    </view>
+  </van-tab>
+</van-tabs>
+
+
+
+
+<view class='goLogin' wx:if="{{!login}}">
+  <cover-image src='../../static/imgs/goLogin.png'></cover-image>
+  <button open-type="getUserInfo" bindgetuserinfo="login">前往登录</button>
+</view>

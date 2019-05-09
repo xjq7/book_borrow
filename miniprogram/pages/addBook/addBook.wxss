@@ -1,0 +1,15 @@
+.history{
+  width: 90%;
+  margin:-1rpx 0 0 5%;
+  height: 150rpx;
+  border-bottom: 1rpx solid #F8C3CD;
+  border-top: 1rpx solid #F8C3CD;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.history .info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

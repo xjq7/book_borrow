@@ -1,0 +1,13 @@
+<van-cell-group>
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="管理员密钥"
+    placeholder="请输入管理员密钥"
+    bind:blur="getPwd"
+  />
+</van-cell-group>
+<van-button size='normal' type="primary" plain class='center' bindtap='next'>验证</van-button>
+<van-button size='normal' type="warning" plain class='center' bindtap='quit'>退出登录</van-button>
+
+<van-toast id="van-toast" />

@@ -1,0 +1,88 @@
+.m1{
+  display: flex;
+  align-items: center;
+}
+.typeCh{
+  display: flex;
+  align-items: center;
+  width: 18%;
+  height: 80rpx;
+  color: rgb(0, 255, 128);
+  font-size: 36rpx;
+  padding-left: 20rpx;
+}
+.typeIcon{
+  padding:10rpx 0 0 5rpx;
+}
+.m1-ph,.m1-ipt{
+  font-size: 30rpx;
+  font-family: 'Verdana';
+  color: #646A58;
+}
+.noSearch{
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.noSearch cover-image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.noSearch text{
+  font-family: "Verdana";
+  font-size: 30rpx;
+  padding: 10rpx 0;
+  color: #554236;
+}
+.noSearch .add{
+  color: #E83015;
+}
+.bookListLine{
+  width: 100%;
+  height: 20rpx;
+}
+
+.bookList{
+  width: 90%;
+  height: 200rpx;
+  margin: 0 auto;
+  margin-top: -1rpx;
+  border-bottom: 1rpx solid #5DAC81;
+  border-top: 1rpx solid #5DAC81;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bookList .leftInfo cover-image{
+  width: 140rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+}
+.bookList .leftInfo{
+  display: flex;
+  align-items: center;
+}
+.bookList .bookInfo{
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+  font-family: 'STXihei';
+  color: #646A58;
+}
+.bookList text{
+  margin: 3rpx 0;
+}
+.collect{
+  width: 150rpx;
+  height: 60rpx;
+  color: #EB7A77;
+  font-family: 'STXihei';
+  font-size: 24rpx;
+  border: 1rpx solid #EB7A77;
+  border-radius: 20rpx;
+  line-height: 60rpx;
+  text-align: center;
+}

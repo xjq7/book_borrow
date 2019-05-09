@@ -1,0 +1,36 @@
+<van-notice-bar
+  left-icon="../../static/imgs/notice.png"
+  text="通告栏占用通告栏占用通告栏占用通告栏占用通告栏占用通告栏占用通告栏占用通告栏占用通告栏占用通告栏占用通告栏占用"
+/>
+<van-toast id="van-toast" />
+<view wx:if="{{ role==''||role==2?true:false}}" class='m1' bindtap='scanBorrow'>
+  <cover-image src='../../static/imgs/scan.png'></cover-image>
+  <text>扫码借书</text>
+</view>
+<view  wx:else class='m2'>
+  <view bindtap='scanReturn'>
+    <cover-image src='../../static/imgs/scan.png'></cover-image>
+    <text>扫码还书</text>
+  </view>
+  <view bindtap='scanAdd'> 
+    <cover-image src='../../static/imgs/scan.png'></cover-image>
+    <text>扫码录入</text>
+    <van-toast id="van-toast" />
+  </view>
+</view>
+<view>
+  <van-cell-group>
+    <van-field
+      value="{{ value }}"
+      placeholder="搜索"
+      border="{{ false }}"
+      bindtap="search"
+      input-align="center"
+    />
+  </van-cell-group>
+  <view class='searchTag'>
+    <van-tag plain type="danger" class="tag" bindtap="">标签</van-tag>
+    <van-tag plain type="danger">标签</van-tag>
+  </view>
+  
+</view>

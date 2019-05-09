@@ -1,0 +1,45 @@
+<van-notice-bar
+  left-icon="../../static/imgs/notice.png"
+  text="选择左侧搜索类型可以提高搜索效率"
+/>
+<view class='m1'>
+  <view  bindtap='typeCh' class='typeCh'>
+    <text>{{searchType}}</text>
+    <van-icon name="arrow-down" class='typeIcon'/>
+  </view>
+  <input placeholder="请输入书名/作者/ISBN" 
+    placeholder-class='m1-ph'
+    class='m1-ipt'
+    bindconfirm="search"
+  ></input>
+  <van-action-sheet
+    show="{{ show }}"
+    actions="{{ actions }}"
+    bind:close="onClose"
+    bind:select="onSelect"
+  />
+  <van-toast id="van-toast" />
+</view>
+<view class='bookListLine'></view>
+<view class='bookList' bindtap='bookInfo' wx:for="{{list}}" wx:key="_id">
+  <view class='leftInfo'>
+    <cover-image src='1.png'  ></cover-image>
+    <view class='bookInfo' >
+      <text>书名:{{item.title}}</text>
+      <text>作者:{{item.author}}</text>
+      <text>剩余:{{item.num}}</text>
+    </view>
+  </view>  
+  <view class='collect' data-idx="{{index}}" catchtap='add'>加入书架</view>
+</view>
+<view class='noSearch' wx:if="{{list.length<1}}">
+  <cover-image src='../../static/imgs/noSearch.png'></cover-image>
+  <text>没有找到您搜索的图书</text>
+  <text class='add' bindtap='application'>
+    申请添加图书
+  </text>
+</view>
+
+
+  
+

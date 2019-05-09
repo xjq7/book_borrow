@@ -1,0 +1,4 @@
+.center button{
+  width: 80%;
+  margin: 40rpx 0 0 10%;
+}

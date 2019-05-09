@@ -1,0 +1,30 @@
+
+
+.m1{
+  width: 90%;
+  height: 150rpx;
+  border: 1rpx solid #B19693;
+  border-radius: 8rpx;
+  margin: 30rpx 0 30rpx 5%;
+  display: flex;
+  align-items: center;
+}
+
+.m1 .clickLogin{
+  font-size: 32rpx;
+  font-family: "Verdana";
+  color: #554236;
+}
+.m1 cover-image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 40rpx 0 20rpx;
+}
+
+.m1 .userInfo{
+  font-family: 'Microsoft Yahei';
+  font-size: 24rpx;
+  color: #554236;
+  display: flex;
+  flex-direction: column;
+}
