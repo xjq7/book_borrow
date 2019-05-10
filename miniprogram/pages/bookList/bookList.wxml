@@ -9,8 +9,8 @@
         <text>作者:李白</text>
       </view>
       <view>
-        <van-icon name="delete" bindtap=''  class='delete'/>
-        <view class='collect' bindtap=''>加入收藏夹</view>
+        <van-icon name="delete" data-idx="{{index}}" bindtap='delete'  class='delete'/>
+        <view class='collect' data-idx="{{index}}" bindtap='addFavorites'>加入收藏夹</view>
       </view>  
     </view>
     <view class='showEmpty' wx:if="{{login&&borrowList.length<1}}">

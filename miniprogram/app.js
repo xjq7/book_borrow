@@ -9,7 +9,8 @@ App({
   },
   globalData: {
     userInfo: {},
-    login:false
+    login:false,
+    book_shelf:false
   },
   getUserInfo() {
     let userInfo = wx.getStorageSync('userInfo')

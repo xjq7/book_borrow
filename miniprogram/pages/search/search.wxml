@@ -21,7 +21,7 @@
   <van-toast id="van-toast" />
 </view>
 <view class='bookListLine'></view>
-<view class='bookList' bindtap='bookInfo' wx:for="{{list}}" wx:key="_id">
+<view class='bookList' data-idx='{{index}}' bindtap='bookInfo' wx:for="{{list}}" wx:key="_id">
   <view class='leftInfo'>
     <cover-image src='1.png'  ></cover-image>
     <view class='bookInfo' >
@@ -39,7 +39,7 @@
     申请添加图书
   </text>
 </view>
-
+<van-toast id="van-toast" />
 
   
 

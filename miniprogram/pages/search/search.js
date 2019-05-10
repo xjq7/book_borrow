@@ -1,4 +1,4 @@
-//index.js
+const app = getApp()
 const db = wx.cloud.database()
 import Toast from '../../vant/toast/toast';
 Page({
@@ -69,30 +69,33 @@ Page({
       })
     }
   },
-  bookInfo(i){
-    console.log('1')
+  bookInfo(event){
+    console.log()
+    let info = JSON.stringify(this.data.list[event.currentTarget.dataset.idx])
+    wx.navigateTo({
+      url: '../../pages/bookInfo/bookInfo?info='+info,
+    })
   },
   add(event){
+    let that = this
     let idx = event.currentTarget.dataset.idx
-    // this.global.i = 
-    // db.collection('book_shelf').add({
-    //   data:{
-
-    //   },
-    //   success(res){
-
-    //   }
-    // })
+    wx.cloud.callFunction({
+      name: 'add_book_shelf',
+      data: {
+        that: that.data.list[idx]
+      }
+    }).then(res=>{
+      if(res.result.data.length>0){
+        Toast("已加入书单!请勿重复添加!!!")
+      }else{
+        Toast("添加成功!")
+        app.globalData.book_shelf = true
+      }   
+    })    
   },
   application(){
     wx.navigateTo({
       url: '/pages/bookApplication/bookApplication'
     })
-  },
-  searchFn(i,v){
-    let that = this
-    console.log(typeof(i))
-    
-    console.log(that.data.list)
   }
 })

@@ -39,7 +39,7 @@ Page({
           title: '添加中...',
         })
         wx.request({
-          url: "https://isbn.market.alicloudapi.com/ISBN?is_info=0&isbn=9787115370655",
+          url: "https://isbn.market.alicloudapi.com/ISBN?is_info=0&isbn=9787115428028",
           method: "GET",
           header: {
             'Authorization': "APPCODE 29364ee21a554177aa41cec6b5dc6490"

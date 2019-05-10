@@ -1,4 +1,4 @@
-<van-cell title="归还日期" is-link value="{{returnDate}}" arrow-direction="down" bind:click="chDate"/>
+<van-cell title="归还日期" is-link value="{{startDate}}" arrow-direction="down" bind:click="chDate"/>
 <view class='mt40'></view>
 <van-button plain type="warning" class="btn" bindtap='next'>确认</van-button>
 <van-action-sheet show="{{ show }}">
@@ -12,6 +12,7 @@
       formatter="{{ formatter }}"
     />
 </van-action-sheet>
+<van-toast id="van-toast" />
 
 
   
