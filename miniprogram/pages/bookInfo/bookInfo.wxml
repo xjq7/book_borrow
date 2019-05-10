@@ -1,2 +1,17 @@
-<!--pages/bookInfo/bookInfo.wxml-->
-<text>pages/bookInfo/bookInfo.wxml</text>
+<van-toast id="van-toast" />
+<view class='pg1'>
+  <cover-image src='{{bookInfo.images_large}}'></cover-image>
+  <view class='p-bookInfo'>
+    <text>{{bookInfo.title}}</text>
+    <text>{{bookInfo.author}}</text>
+    <text>已借阅    {{bookInfo.borrow}}</text>
+    <text>剩余    {{bookInfo.num - bookInfo.borrow}}</text>
+  </view>
+</view>
+<view class='pg2 top_bottom_line' >
+  <text></text>
+  <text></text>
+  <view></view>
+  <text></text>
+  <text></text>
+</view>

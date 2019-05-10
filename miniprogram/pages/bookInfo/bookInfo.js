@@ -1,9 +1,12 @@
+import Toast from '../../vant/toast/toast';
 
 Page({
   data: {
-
+    bookInfo:{}
   },
   onLoad: function (options) {
-    console.log(JSON.parse(options.info))
+    this.setData({
+      bookInfo: JSON.parse(options.info)
+    })
   }
 })

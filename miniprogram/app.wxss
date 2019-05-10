@@ -26,6 +26,11 @@
   padding-right: 30rpx;
 }
 
+.top_bottom_line{
+  border-bottom: 1rpx solid #F4F4F4;
+  border-top: 1rpx solid #F4F4F4;
+}
+
 .showEmpty{
   width: 100%;
   height: 300rpx;
