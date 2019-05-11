@@ -3,7 +3,31 @@ import Toast from '../../vant/toast/toast';
 const db = wx.cloud.database()
 Page({
   data: {
-    role:''
+    role:'',
+    login:false
+  },
+  onLoad(){
+    let that = this
+    db.collection("bookInfo").orderBy('borrowNum', 'desc').limit(10).get({
+      success(res){
+        that.setData({
+          list:res.data,
+          login:app.globalData.login
+        })
+      }
+    })
+  },
+  onShow(){
+    that.setData({
+      login: app.globalData.login
+    })
+  },
+  login(e) {
+    if (e.detail.userInfo) {
+      wx.navigateTo({
+        url: '../../pages/login/login?gender=' + e.detail.userInfo.gender + '&avatarUrl=' + e.detail.userInfo.avatarUrl,
+      })
+    }
   },
   onShow(){
     let that = this
@@ -55,6 +79,7 @@ Page({
                   } else {
                     res1.data.result.num = 1
                     res1.data.result.borrow = 0
+                    res1.data.result.borrowNum = 0
                     db.collection("bookInfo").add({
                       data: res1.data.result
                     }).then(res => {

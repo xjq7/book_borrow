@@ -12,7 +12,7 @@
 		"nodeModules": true
 	},
 	"appid": "wxbdc8768378823f14",
-	"projectname": "borrowBook",
+	"projectname": "Book management system",
 	"libVersion": "2.6.6",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},

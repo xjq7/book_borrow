@@ -1,16 +1,19 @@
+<van-toast id="van-toast" />
 <van-tabs active="{{ active }}" bind:change="onChange">
   <van-tab title="借书单">
     <view class='bookListLine'></view>
-    <view class='bookList'>
-      <cover-image src='1.png'></cover-image>
-      <view class='bookInfo'>
-        <text>书名:西游记</text>
-        <text>ISBN:23123412431</text>
-        <text>作者:李白</text>
-      </view>
+    <view class='bookList' wx:for="{{borrowList}}" wx:key="_id">
+      <view class='b-left'>
+        <cover-image src='{{item.img}}'></cover-image>
+        <view class='bookInfo'>
+          <text>书名:{{item.bookName}}</text>
+          <text>ISBN:{{item.isbn}}</text>
+          <text>作者:{{item.author}}</text>
+        </view>
+      </view> 
       <view>
-        <van-icon name="delete" data-idx="{{index}}" bindtap='delete'  class='delete'/>
-        <view class='collect' data-idx="{{index}}" bindtap='addFavorites'>加入收藏夹</view>
+        <van-icon name="delete"  data-idx='{{index}}' data-type="0" bindtap='de' class='delete'/>
+        <view class='collect' data-idx="{{index}}" data-type="0" bindtap='ch'>加入收藏夹</view>
       </view>  
     </view>
     <view class='showEmpty' wx:if="{{login&&borrowList.length<1}}">
@@ -22,16 +25,18 @@
   </van-tab>
   <van-tab title="收藏夹">
     <view class='bookListLine'></view>
-    <view class='bookList'>
-      <cover-image src='1.png'></cover-image>
-      <view class='bookInfo'>
-        <text>书名:西游记</text>
-        <text>ISBN:23123412431</text>
-        <text>作者:李白</text>
+    <view class='bookList' wx:for="{{favorites}}" wx:key="_id"> 
+      <view class='b-left'>
+        <cover-image src='{{item.img}}'></cover-image>
+        <view class='bookInfo'>
+          <text>书名:{{item.bookName}}</text>
+          <text>ISBN:{{item.isbn}}</text>
+          <text>作者:{{item.author}}</text>
+        </view>
       </view>
       <view>
-        <van-icon name="delete" bindtap=''  class='delete'/>
-        <view class='collect' bindtap=''>加入借书单</view>
+        <van-icon name="delete" data-idx='{{index}}' data-type="1" bindtap='de'  class='delete'/>
+        <view class='collect' data-idx='{{index}}' data-type="1" bindtap='ch'>加入借书单</view>
       </view>  
     </view>
     <view class='showEmpty' wx:if="{{login&&favorites.length<1}}">
@@ -40,10 +45,6 @@
     </view>
   </van-tab>
 </van-tabs>
-
-
-
-
 <view class='goLogin' wx:if="{{!login}}">
   <cover-image src='../../static/imgs/goLogin.png'></cover-image>
   <button open-type="getUserInfo" bindgetuserinfo="login">前往登录</button>

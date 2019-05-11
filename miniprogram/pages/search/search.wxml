@@ -23,7 +23,7 @@
 <view class='bookListLine'></view>
 <view class='bookList' data-idx='{{index}}' bindtap='bookInfo' wx:for="{{list}}" wx:key="_id">
   <view class='leftInfo'>
-    <cover-image src='1.png'  ></cover-image>
+    <cover-image src='{{item.images_large}}'  ></cover-image>
     <view class='bookInfo' >
       <text>书名:{{item.title}}</text>
       <text>作者:{{item.author}}</text>

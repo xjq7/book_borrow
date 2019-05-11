@@ -28,7 +28,6 @@ Page({
     let date = new Date(event.detail);
     this.setData({
       returnDate: formatdate.borrowDate(date),
-      startDate: formatdate.borrowDate(date),
       show:false
     })
   },
@@ -42,33 +41,30 @@ Page({
       let insertBorrow = db.collection('borrow_record').add({
         data: {
           isbn: `${v.isbn}`,
-          bookName:`${v.title}`,
-          name:app.globalData.userInfo._openid,
+          bookName:`${v.bookName}`,
+          name:app.globalData.userInfo.name,
           studentId:app.globalData.userInfo.studentId,
           startDate: that.data.startDate,
           endDate:that.data.returnDate,
           overdue:0,
-          finish:0
+          finish:'0',
+          finishDate:''
         }
       })
       borrow.push(insertBorrow)
     })
-    Promise.all(borrow).then((res) => {
+    Promise.all(borrow).then((res) => { 
       wx.hideLoading()
       Toast("成功借阅!")
-      setTimeout(function(){
-        let pages = getCurrentPages();
-        let prevPage = pages[pages.length - 2]
-        prevPage.setData({
-          borrowList: []
-        })
+      wx.cloud.callFunction({
+        name:'de_book_shelf',
+        data:{}
+      }).then(res=>{
         wx.navigateBack({
           delta: 2
         })
-      },1000)
+      })
       
-    }).catch(err=>{
-      Toast("借阅失败!")
     })
   },
   onLoad: function (options) {

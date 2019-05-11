@@ -1,0 +1,61 @@
+<van-tabs swipeable>
+  <van-tab title="未完成">
+    <scroll-view
+    scroll-y
+    style="{{scrollHeight}}"
+    bindscrolltolower="lLower"
+  >
+  <view class="pd"></view>
+  <view class='list top_bottom_line' wx:for="{{lList}}" wx:key="item._id">
+    <view class='l-return'>
+      <text>书名:《{{item.bookName}}》</text>
+      <text>借阅日期:{{item.startDate}}</text>
+      <text>还书日期:{{item.endDate}}</text>
+    </view>
+    <view class='l-status color_yellow'>
+      {{'借阅中'}}
+    </view>
+  </view> 
+</scroll-view>
+  </van-tab>
+  <van-tab title="违约">
+    <scroll-view
+    scroll-y
+    style="{{scrollHeight}}"
+    bindscrolltolower="lLower"
+  >
+  <view class="pd"></view>
+  <view class='list top_bottom_line' wx:for="{{mList}}" wx:key="item._id">
+    <view class='l-return'>
+      <text>书名:《{{item.bookName}}》</text>
+      <text>借阅日期:{{item.startDate}}</text>
+      <text>还书日期:{{item.endDate}}</text>
+    </view>
+    <view class='l-status color_yellow'>
+      {{'已违约!!!'}}
+    </view>
+  </view> 
+</scroll-view>
+  </van-tab>
+  <van-tab title="已完成">
+    <scroll-view
+    scroll-y
+    style="{{scrollHeight}}"
+    bindscrolltolower="rLower"
+  >
+  <view class="pd"></view>
+  <view class='list top_bottom_line' wx:for="{{rList}}" wx:key="item._id">
+    <view class='l-return'>
+      <text>书名:《{{item.bookName}}》</text>
+      <text>借阅日期:{{item.startDate}}</text>
+      <text>预约归还日期:{{item.endDate}}</text>
+      <text>还书日期:{{item.finishDate}}</text>
+    </view>
+    <view class='l-status color_lime'>
+      {{'已完成'}}
+    </view>
+  </view>
+</scroll-view>
+  </van-tab>
+</van-tabs>
+

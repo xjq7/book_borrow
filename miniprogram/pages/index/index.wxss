@@ -18,11 +18,11 @@
   width: 100rpx;
   height: 100rpx;
 }
-.m1 cover-image{
-  width: 20%;
+.m1 .scanBorrow cover-image{
+  width: 120rpx;
   height:120rpx;
 }
-.m1 text,.m2 text{
+.m1 .scanBorrow text,.m2 text{
   font-size: 30rpx;
   font-family: "STXihei";
 }

@@ -4,6 +4,7 @@
   height: 300rpx;
   margin: 0 auto;
   margin-top: 30rpx;
+  margin-bottom: 30rpx;
   display: flex;
   align-items: center;
 }
@@ -28,7 +29,75 @@
 .pg2{
   width: 80%;
   margin: 0 auto;
+  height: 240rpx;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border: 1rpx solid #F4F4F4;
+  font-size: 28rpx;
+  color: #CDC5D6;
+}
+.pg2 view:nth-child(1){
+  flex-direction: column;
+}
+.pg2 view:nth-child(2){
+  justify-content: space-between;
+}
+.pg2 view{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+.pg2 view text{
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+
+.pg3{
+  width: 100%;
+  margin-top:30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.pg3 view{
+  width: 80%;
+  height: 1rpx;
+  background: #F4F4F4;
+}
+.p3-title{
+  padding:0 0 2rpx 20rpx;
+  font-size: 36rpx;
+  color: red;
+}
+.pg3 .p3-info{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 32rpx;
+}
+.pg4{
+  width: 100%;
+  height: 80rpx;
+  border: 1rpx solid #F4F4F4;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+}
+.pg4 .p4-next{
+  width: 200rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: red;
+  color: white;
+  font-size: 30rpx;
+}
+.pg4 .p4-favorite{
+  width: 100rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
 }

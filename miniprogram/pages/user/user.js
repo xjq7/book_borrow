@@ -40,13 +40,29 @@ Page({
     })
   },
   setting(){
-    wx.navigateTo({
+    if (!app.globalData.login) {
+      Toast("请先登录!!!")
+      return
+    }    wx.navigateTo({
       url: `../../pages/setting/setting?id=${this.data.userInfo._id}`,
     })
   },
   adminSetting(){
+    if (!app.globalData.login) {
+      Toast("请先登录!!!")
+      return
+    }
     wx.navigateTo({
       url: `../../pages/adminSetting/adminSetting?id=${this.data.userInfo._id}`,
+    })
+  },
+  borrowRecord(){
+    if (!app.globalData.login) {
+      Toast("请先登录!!!")
+      return
+    }
+    wx.navigateTo({
+      url: '../../pages/borrowRecord/borrowRecord',
     })
   }
 })

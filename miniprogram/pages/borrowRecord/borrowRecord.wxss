@@ -1,0 +1,34 @@
+.pd{
+  height: 20rpx;
+}
+
+
+.list{
+  width: 80%;
+  margin: 0 auto;
+  height: 180rpx;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -1rpx;
+}
+.list .l-return{
+  display: flex;
+  flex-direction: column
+}
+.list .l-status{
+  margin-right:20rpx; 
+}
+.list .l-return text{
+  margin: 5rpx 0;
+}
+.color_red{
+  color: red;
+}
+.color_lime{
+  color: lime;
+}
+.color_yellow{
+  color: yellow;
+}

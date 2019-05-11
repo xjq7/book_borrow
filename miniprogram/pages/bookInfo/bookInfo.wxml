@@ -8,10 +8,27 @@
     <text>剩余    {{bookInfo.num - bookInfo.borrow}}</text>
   </view>
 </view>
-<view class='pg2 top_bottom_line' >
-  <text></text>
-  <text></text>
+<view class='pg2' >
+  <view>
+    <text>出版社  {{bookInfo.publisher}}</text>
+    <text>ISBN  {{bookInfo.isbn13}}</text>
+  </view>
+  <view>
+    <text>出版时间  {{bookInfo.pubdate}}    </text>
+    <text>页数{{bookInfo.pages}}</text>
+  </view>
+</view>
+
+<view class='pg3'>
+  <text class='p3-title'>内容介绍</text>
   <view></view>
-  <text></text>
-  <text></text>
+  <text class='p3-info'>{{bookInfo.summary==''?'暂无简介。。。':bookInfo.summary}}</text>
+</view>
+
+<view class='pg4'>
+  <view class='p4-favorite' bindtap='favorite'> 
+    <van-icon name="star-o" />
+    <text>收藏</text>
+  </view>
+  <view class='p4-next' bindtap='next'>加入书架</view>
 </view>
