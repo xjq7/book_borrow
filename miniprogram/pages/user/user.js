@@ -8,7 +8,7 @@ Page({
     login:app.globalData.login
   },
   login(e){
-    let u = e.detail.userInfo
+    let u = e.detail.userInfo//wx.getUserInfo返回的用户信息
     let that = this
     wx.cloud.callFunction({
       name: 'login',

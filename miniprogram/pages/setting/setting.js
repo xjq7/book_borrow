@@ -43,6 +43,9 @@ Page({
         success(res) {
           let u = app.globalData.userInfo
           u.role = 1
+          try {
+            wx.setStorageSync('userInfo', u)
+          } catch (e) { }
           let pages = getCurrentPages();
           let prevPage = pages[pages.length - 2]
           prevPage.setData({
