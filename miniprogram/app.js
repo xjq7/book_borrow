@@ -1,8 +1,7 @@
-//app.js
 App({
   onLaunch: function () {
     wx.cloud.init({
-      env: 'book-2', // 环境 id
+      env: 'book-1gpbcw5b0062350d', // 环境 id
       traceUser: true
     });
     this.getUserInfo()
