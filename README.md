@@ -77,6 +77,18 @@ npm i
 
 <img src="./docs/load_function.png"/>
 
+### 数据库集合创建
+
+创建如下集合
+
+1. bookApplication
+2. bookInfo
+3. book_shelf
+4. borrow_record
+5. users
+
+<img src="./docs/database.png"/>
+
 ## 功能
 
 1. 扫码借书
